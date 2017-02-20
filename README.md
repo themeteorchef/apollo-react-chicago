@@ -1,9 +1,17 @@
-##### Tutorial: Getting Started with React
+##### Talk: Getting Started with Meteor, Apollo, and React
 
-In this tutorial, we'll learn how to use React. We'll learn how to define components, work with props and state, and see how to make use of lifecycle and custom methods on our components. We'll also learn about the different ways we can define a React component, wrapping up with a demo of connecting our components to MongoDB in Meteor.
+In this talk, we take a look at Meteor, GraphQL, Apollo, and React. We learn how to define a GraphQL server, a GraphQL schema, and connect our React-based interface to our GraphQL server using Apollo.
 
-[Learn How to Get Started with React](https://themeteorchef.com/tutorials/getting-started-with-react)  
+[Getting Started with Apollo](https://themeteorchef.com/tutorials/getting-started-with-apollo) (Paid)  
+[Getting Started with React](https://themeteorchef.com/tutorials/getting-started-with-react) (Free)
+[Getting Started with Meteor](https://themeteorchef.com/tutorials/getting-started-with-meteor) (Free)
 
-[Download the Source](https://github.com/themeteorchef/getting-started-with-react/archive/master.zip)
+[Download the source of this talk](https://github.com/themeteorchef/apollo-react-chicago/archive/master.zip)
 
-The code for this tutorial is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+---
+
+**Need help with this?** [Sign up for a Mentorship appointment](https://themeteorchef.com/mentorship?talk=apollo-react-chicago) and get 1-on-1 help.
+
+---
+
+_The code for this tutorial is licensed under the [MIT License](http://opensource.org/licenses/MIT)_.
