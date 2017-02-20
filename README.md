@@ -2,9 +2,9 @@
 
 In this talk, we take a look at Meteor, GraphQL, Apollo, and React. We learn how to define a GraphQL server, a GraphQL schema, and connect our React-based interface to our GraphQL server using Apollo.
 
-[Getting Started with Apollo](https://themeteorchef.com/tutorials/getting-started-with-apollo) (Paid)  
-[Getting Started with React](https://themeteorchef.com/tutorials/getting-started-with-react) (Free)
-[Getting Started with Meteor](https://themeteorchef.com/tutorials/getting-started-with-meteor) (Free)
+- [Getting Started with Apollo](https://themeteorchef.com/tutorials/getting-started-with-apollo) (Paid)  
+- [Getting Started with React](https://themeteorchef.com/tutorials/getting-started-with-react) (Free)
+- [Getting Started with Meteor](https://themeteorchef.com/tutorials/getting-started-with-meteor) (Free)
 
 [Download the source of this talk](https://github.com/themeteorchef/apollo-react-chicago/archive/master.zip)
 
