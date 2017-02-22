@@ -1,6 +1,6 @@
 import React from 'react';
 import BooksList from './BooksList';
-import AddBook from './AddBook';
+import AddBook from '../containers/AddBook';
 
 export default class Books extends React.Component {
   constructor(props) {
@@ -19,9 +19,10 @@ export default class Books extends React.Component {
   }
 
   render() {
+    const { data } = this.props;
     return (<div className="Books">
-      <h4>{`${this.props.firstName}'s`} Books</h4>
-      <AddBook />
+      <h4>Books</h4>
+      <AddBook refetch={ data.refetch } />
       <ul className="tabs clearfix">
         <li onClick={ this.handleChangeTabs } className={`tab ${this.setActiveClassOnTab('read')}`} data-tab="read">Read</li>
         <li onClick={ this.handleChangeTabs } className={`tab ${this.setActiveClassOnTab('unread')}`} data-tab="unread">Unread</li>
@@ -29,12 +30,12 @@ export default class Books extends React.Component {
       <div className="tabs-data">
         <BooksList
           type="read"
-          books={ this.props.readBooks }
+          books={ _.where(data.books, { read: true }) }
           isActive={ this.setActiveClassOnTab('read') }
         />
         <BooksList
           type="unread"
-          books={ this.props.unreadBooks }
+          books={ _.where(data.books, { read: false }) }
           isActive={ this.setActiveClassOnTab('unread') }
         />
       </div>

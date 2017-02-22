@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import { Bert } from 'meteor/themeteorchef:bert';
 
-const handleAddBook = (event) => {
+const handleAddBook = (event, mutate, refetch) => {
   event.preventDefault();
 
   const book = {
@@ -10,18 +11,24 @@ const handleAddBook = (event) => {
     read: document.querySelector('[name="bookRead"]').checked,
   };
 
-  Meteor.call('addBook', book, (error, bookId) => {
-    if (error) {
-      console.warn(error.reason);
-    } else {
-      document.querySelector('.AddBook').reset();
-      console.log('Book added with ID:', bookId);
-    }
+  mutate({
+    variables: book,
+  })
+  .then((response) => {
+    console.log(response);
+    document.querySelector('.AddBook').reset();
+    refetch();
+  })
+  .catch((error) => {
+    Bert.alert(error, 'danger');
   });
 };
 
-export default AddBook = () => (
-  <form className="AddBook clearfix" onSubmit={ handleAddBook }>
+export default AddBook = ({ mutate, refetch }) => (
+  <form
+    className="AddBook clearfix"
+    onSubmit={(event) => { handleAddBook(event, mutate, refetch); }}
+  >
     <input type="text" name="bookTitle" placeholder="Book Title" />
     <input type="text" name="bookAuthor" placeholder="Book Author" />
     <label><input type="checkbox" name="bookRead" /> Read?</label>
